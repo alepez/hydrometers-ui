@@ -22,6 +22,14 @@ export default {
       actions: 'Actions',
       add: 'Add random user',
       profile: 'Profile'
+    },
+    hydrometers: {
+      'page-title': 'Hydrometers',
+      title: 'Some random hydrometers',
+      email: 'Email address',
+      actions: 'Actions',
+      add: 'Add random user',
+      profile: 'Profile'
     }
   }
 };

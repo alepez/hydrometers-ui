@@ -50,7 +50,7 @@ export default class Hydrometers extends React.Component {
     return this.setState(state);
   }
 
-  _removeUser(index: number) {
+  _removeHydrometer(index: number) {
     this.props.flux
       .getActions('hydrometers')
       .remove(index);
@@ -61,21 +61,21 @@ export default class Hydrometers extends React.Component {
       .transitionTo('profile', {seed});
   }
 
-  _renderUsers() {
-    return this.state.hydrometers.map((user, index) => {
+  _renderHydrometers() {
+    return this.state.hydrometers.map((hydrometer, index) => {
       return (
-        <tr className='user--row' key={index}>
-          <td>{user.user.email}</td>
+        <tr className='hydrometer--row' key={index}>
+          <td>{hydrometer.hydrometer.email}</td>
           <td className='text-center'>
             <button
-              onClick={this._showProfile.bind(this, user.seed)}>
+              onClick={this._showProfile.bind(this, hydrometer.seed)}>
               Profile
             </button>
           </td>
           <td className='text-center'>
             <button
-              className='user--remove'
-              onClick={this._removeUser.bind(this, index)}>
+              className='hydrometer--remove'
+              onClick={this._removeHydrometer.bind(this, index)}>
               X
             </button>
           </td>
@@ -102,7 +102,7 @@ export default class Hydrometers extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this._renderUsers()}
+            {this._renderHydrometers()}
           </tbody>
         </table>
         <p className='text-center'>

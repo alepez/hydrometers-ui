@@ -14,12 +14,14 @@ class Flux extends Alt {
     this.addActions('requests', require('actions/requests'));
     this.addActions('locale', require('actions/locale'));
     this.addActions('users', require('actions/users'));
+    this.addActions('hydrometers', require('actions/hydrometers'));
     this.addActions('page-title', require('actions/page-title'));
 
     // Register Stores
     this.addStore('requests', require('stores/requests'));
     this.addStore('locale', require('stores/locale'));
     this.addStore('users', require('stores/users'));
+    this.addStore('hydrometers', require('stores/hydrometers'));
     this.addStore('page-title', require('stores/page-title'));
   }
 
