@@ -11,6 +11,9 @@ export default (
       name='users'
       handler={require('./components/users')} />
     <Route
+      name='hydrometers'
+      handler={require('./components/hydrometers')} />
+    <Route
       name='guides'
       handler={require('./components/guides')} />
     <Route
