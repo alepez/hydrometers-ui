@@ -103,6 +103,12 @@ export default {
     resolve: {
       extensions: ['', '.js', '.json', '.jsx'],
       modulesDirectories: ['node_modules', 'app']
+    },
+    node: {
+      console: 'empty',
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
     }
   }
 };
